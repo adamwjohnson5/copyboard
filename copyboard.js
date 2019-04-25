@@ -6,7 +6,10 @@ MIT License 2019 */
 "use strict";
 
 class Copyboard {
-    copy(string) {
+    constructor(string) {
+        this.string = string;
+    }
+    copy() {
         // Create input
         let i = document.createElement('input');
         i.setAttribute('id', 'copyToClipboard');
@@ -14,7 +17,7 @@ class Copyboard {
         // Get input and add value
         let j = document.querySelector('input#copyToClipboard');
         j.style.opacity = 0;
-        j.value = string;
+        j.value = this.string;
         j.select();
         // Copy and remove
         document.execCommand('copy');
