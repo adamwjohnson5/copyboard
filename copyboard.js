@@ -1,4 +1,4 @@
-/* Copyboard
+/* Copyboard v1.0
 Easy JS copy to clipboard.
 https://github.com/adamwjohnson5/copyboard
 By Adam Johnson
