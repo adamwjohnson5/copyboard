@@ -19,7 +19,7 @@ class Copyboard {
         input.setAttribute('id', 'copyToClipboard');
         input.value = string;
         input.style.opacity = 0;
-        document.body.appendChild(input);
+        document.querySelector('body').after(input);
         
         // Get input and select value
         const copyToClipboard = document.querySelector('input#copyToClipboard');
