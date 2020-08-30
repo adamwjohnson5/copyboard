@@ -1,26 +1,32 @@
-/* Copyboard v1.0
+/*
+
+Copyboard v1.1
 Easy JS copy to clipboard.
+
 https://github.com/adamwjohnson5/copyboard
+
 By Adam Johnson
-MIT License 2019 */
+MIT License 2019
+
+*/
 
 "use strict";
 
 class Copyboard {
     static copy(string) {
         // Create input
-        let i = document.createElement('input');
-        i.setAttribute('id', 'copyToClipboard');
-        document.body.appendChild(i);
+        const input = document.createElement('input');
+        input.setAttribute('id', 'copyToClipboard');
+        input.value = string;
+        input.style.opacity = 0;
+        document.body.appendChild(input);
         
-        // Get input and add value
-        let j = document.querySelector('input#copyToClipboard');
-        j.style.opacity = 0;
-        j.value = string;
-        j.select();
+        // Get input and select value
+        const copyToClipboard = document.querySelector('input#copyToClipboard');
+        copyToClipboard.select();
         
-        // Copy and remove
+        // Copy then remove
         document.execCommand('copy');
-        j.remove();
+        copyToClipboard.remove();
     }
 }
