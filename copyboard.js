@@ -9,7 +9,6 @@ By Adam Johnson
 MIT License 2019
 
 */
-
 'use strict';
 
 class Copyboard {
